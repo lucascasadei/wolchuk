@@ -170,7 +170,7 @@
                         });
                         
                         setTimeout(function () {
-                          window.location.assign("pages/PaginaPrincipal/PaginaPrincipal.php"); 
+                          window.location.assign("pages/PaginaPrincipal/paginaPrincipalVendedores.php"); 
                         }, 2000);
                       
                         
@@ -191,7 +191,7 @@
                       if (formData.success == 3) {
                         Swal.fire({
                           title: '¡Error!',
-                          text: 'El dni no existe en la base de datos',
+                          text: 'La contraseña o el dni son incorrectos',
                           icon: 'error',
                           customClass: {
                             confirmButton: 'btn btn-primary'
