@@ -1,3 +1,15 @@
+<?php 
+
+
+session_start();
+
+if($_SESSION["idUsuario"] != ""){
+
+
+
+
+
+?>
 
 <!DOCTYPE html>
 
@@ -160,7 +172,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span class="fw-semibold d-block"><?php echo $_SESSION["nombreUsuario"]; echo $_SESSION["apellidoUsuario"]; ?></span>
                             <small class="text-muted">Vendedor</small>
                           </div>
                         </div>
@@ -569,3 +581,17 @@
 
   </body>
 </html>
+
+<?php 
+
+} else {
+
+
+  // Redirigir a la página "nueva_pagina.php"
+header("Location: ../../index.html");
+exit(); // Asegúrate de salir después de enviar la cabecera de redirección
+
+
+}
+
+?>
