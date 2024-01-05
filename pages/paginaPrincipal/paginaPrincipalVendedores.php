@@ -242,13 +242,13 @@
                   <!-- Dashboards -->
                   <li class="menu-item">
                     <a href="javascript:void(0)" class="menu-link menu-toggle">
-                      <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                      <i class='menu-icon tf-icons bx bx-user'></i>
                       <div data-i18n="Clientes">Clientes</div>
                     </a>
                     <ul class="menu-sub">
                       <li class="menu-item">
                         <a href="dashboards-analytics.html" class="menu-link">
-                          <i class="menu-icon tf-icons bx bx-pie-chart-alt-2"></i>
+                          <i class='menu-icon tf-icons bx bx-user'></i>
                           <div data-i18n="Agregar clientes">Agregar clientes</div>
                         </a>
                       </li>
@@ -294,40 +294,22 @@
                         <div class="mb-3 col-lg-4">
                           <label class="form-label" for="basic-icon-default-email">Razón social</label>
                           <div class="input-group input-group-merge">
-                            <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                            <span class="input-group-text"><i class='bx bx-id-card'></i></span>
                             <input name="clienteRazonSocial" type="text" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: Milka" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
                           </div>
                         </div>
                         <div class="mb-3 col-lg-4">
                           <label class="form-label" for="basic-icon-default-email">Cuit</label>
                           <div class="input-group input-group-merge">
-                            <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                            <span class="input-group-text"><i class='bx bx-id-card'></i></span>
                             <input name="clienteCuit" type="number" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 2046354131" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
                           </div>
                         </div>
-
-                        <div class="mb-3 col-lg-4">
-                          <label class="form-label" for="basic-icon-default-email">Barrio</label>
-                          <select class="form-select" name="clienteBarrio" aria-label="">
-                                <option disabled>Barrio</option>
-                                <?php
-                                  include '../../db/conexion.php';
-
-                                  $buscarBarrio = $pdo->prepare("SELECT DISTINCT Barrios_Nombre, Id_Barrios FROM barrio ORDER BY Barrios_Nombre ASC");
-                                  $buscarBarrio->execute();
-
-                                  foreach ($buscarBarrio as $b) {
-                                      echo '<option value="', $b['Id_Barrios'], '">', $b['Barrios_Nombre'], '</option>';
-                                  }
-                                  ?>
-
-                          </select>
-                        </div>
-
                         <div class="mb-3 col-lg-4">
                           <label class="form-label" for="basic-icon-default-email">Departamento</label>
                           <select id="department" name="clienteDepartamento" class="select2 form-select" data-allow-clear="true">
                                 <?php 
+                                include '../../db/conexion.php';
                                     $buscarDepartamento = $pdo->prepare("SELECT * FROM departamento ORDER BY descripcion ASC");
                                     $buscarDepartamento->execute();
                                     foreach($buscarDepartamento as $b){
@@ -345,14 +327,48 @@
                         </div>
 
                         <div class="mb-3 col-lg-4">
-                          <label class="form-label" for="basic-icon-default-email">Código postal</label>
+                          <label class="form-label" for="basic-icon-default-email">Barrio</label>
+                          <select class="form-select" name="clienteBarrio" aria-label="">
+                                <option disabled>Barrio</option>
+                                <?php
+                                  
+
+                                  $buscarBarrio = $pdo->prepare("SELECT DISTINCT Barrios_Nombre, Id_Barrios FROM barrio ORDER BY Barrios_Nombre ASC");
+                                  $buscarBarrio->execute();
+
+                                  foreach ($buscarBarrio as $b) {
+                                      echo '<option value="', $b['Id_Barrios'], '">', $b['Barrios_Nombre'], '</option>';
+                                  }
+                                  ?>
+
+                          </select>
+                        </div>
+
+                        <div class="mb-3 col-lg-2">
+                          <label class="form-label" for="basic-icon-default-email">Calle</label>
                           <div class="input-group input-group-merge">
-                            <span class="input-group-text"><i class="bx bx-envelope"></i></span>
-                            <input name="clienteCodPostal" type="text" id="basic-icon-default-email" class="form-control" placeholder="john.doe" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                            <span class="input-group-text"><i class='bx bx-directions'></i></span>
+                            <input name="clienteCalle" type="text" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: Av. Gendarmería Nacional" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
                           </div>
                         </div>
 
-                        <div class="mb-3 col-lg-4">
+                        <div class="mb-3 col-lg-2">
+                          <label class="form-label" for="basic-icon-default-email">Altura</label>
+                          <div class="input-group input-group-merge">
+                            <span class="input-group-text"><i class='bx bx-directions'></i></span>
+                            <input name="clienteAltura" type="text" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 1284" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                          </div>
+                        </div>
+
+                        <div class="mb-3 col-lg-2">
+                          <label class="form-label" for="basic-icon-default-email">Código postal</label>
+                          <div class="input-group input-group-merge">
+                            <span class="input-group-text"><i class="bx bx-envelope"></i></span>
+                            <input name="clienteCodPostal" type="text" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 3600" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                          </div>
+                        </div>
+
+                        <div class="mb-3 col-lg-2">
                           <label class="form-label" for="basic-icon-default-email">Zona</label>
                           <select id="department" name="clienteZona" class="select2 form-select" data-allow-clear="true" >
                                 <?php 

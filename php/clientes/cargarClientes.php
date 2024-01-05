@@ -17,9 +17,11 @@ $clienteDepartamento = $_POST['clienteDepartamento'];
 $clienteLocalidad = $_POST['clienteLocalidad'];
 $clienteCodPostal = $_POST['clienteCodPostal'];
 $clienteZona = $_POST['clienteZona'];
+$clienteCalle = $_POST['clienteCalle'];
+$clienteAltura = $_POST['clienteAltura'];
 $idUsuarios = $_SESSION["idUsuario"];
 
-if($nombre !="" and $apellido !="" and $razonSocial !="" and $cuit !="" and $clienteBarrio !="" and $clienteDepartamento !="" and $clienteLocalidad !="" and $clienteCodPostal !="" and $clienteZona !=""){
+if($nombre !="" and $apellido !="" and $razonSocial !="" and $cuit !="" and $clienteBarrio !="" and $clienteDepartamento !="" and $clienteLocalidad !="" and $clienteCodPostal !="" and $clienteZona !="" and $clienteCalle !="" and $clienteAltura !=""){
     
 
     $buscarCliente = $pdo->prepare("SELECT * FROM clientes WHERE clientes_cuit='$cuit'");
@@ -30,8 +32,8 @@ if($nombre !="" and $apellido !="" and $razonSocial !="" and $cuit !="" and $cli
 
     }else{
 
-        $cargarCliente = $pdo->prepare("INSERT INTO clientes(clientes_nombre, clientes_apellido, clientes_razonSocial, clientes_cuit, clientes_CodPostal, Rela_barrio, Rela_departamento, Rela_localidad, Rela_zona, Rela_usuario) 
-        VALUES(:nombre, :apellido, :razonSocial, :cuit, :codPostal, :barrio, :departamento, :localidad, :zona, :usuario)");
+        $cargarCliente = $pdo->prepare("INSERT INTO clientes(clientes_nombre, clientes_apellido, clientes_razonSocial, clientes_cuit, clientes_CodPostal, Rela_barrio, Rela_departamento, Rela_localidad, Rela_zona, Rela_usuario, clientes_calle, clientes_altura) 
+        VALUES(:nombre, :apellido, :razonSocial, :cuit, :codPostal, :barrio, :departamento, :localidad, :zona, :usuario, :calle, :altura)");
 
         $cargarCliente->bindParam(':nombre',$nombre);
         $cargarCliente->bindParam(':apellido',$apellido);
@@ -42,6 +44,8 @@ if($nombre !="" and $apellido !="" and $razonSocial !="" and $cuit !="" and $cli
         $cargarCliente->bindParam(':departamento',$clienteDepartamento);
         $cargarCliente->bindParam(':localidad',$clienteLocalidad);
         $cargarCliente->bindParam(':zona',$clienteZona);
+        $cargarCliente->bindParam(':calle',$clienteCalle);
+        $cargarCliente->bindParam(':altura',$clienteAltura);
         $cargarCliente->bindParam(':usuario',$idUsuarios);
 
         if($cargarCliente->execute()){
