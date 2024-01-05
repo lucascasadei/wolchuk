@@ -194,7 +194,7 @@ session_start();
                     });
                     
                     setTimeout(function () {
-                      window.location.assign("../PaginaPrincipal/paginaPrincipalVendedores.php"); 
+                      window.location.assign("../paginaPrincipal/paginaPrincipalVendedores.php"); 
                     }, 2000);
                    
                     
