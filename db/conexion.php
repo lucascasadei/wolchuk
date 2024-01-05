@@ -20,9 +20,9 @@ if (isLocalhost()) {
     $db_name = 'wolchuk';
 } else {
     // Estás en un servidor de hosting (Hostinger)
-    $db_username = 'u881364944_empleosformosa';
-    $db_password = '5Ub5s3c7e7ar14';
-    $db_name = 'u881364944_empleosformosa';
+    $db_username = 'u277628716_wolchuk';
+    $db_password = 'Cf4b1a7123';
+    $db_name = 'u277628716_wolchuk';
 }
 
 // Intenta conectarse a la base de datos
