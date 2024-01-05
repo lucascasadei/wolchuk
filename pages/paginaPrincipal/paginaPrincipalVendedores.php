@@ -182,7 +182,7 @@ if($_SESSION["idUsuario"] != ""){
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-cover.html" target="../login/salir.php">
+                      <a class="dropdown-item" href="../login/salir.php" target="">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Salir</span>
                       </a>
