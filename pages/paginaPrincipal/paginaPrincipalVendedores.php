@@ -172,7 +172,7 @@ if($_SESSION["idUsuario"] != ""){
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block"><?php echo $_SESSION["nombreUsuario"]; echo $_SESSION["apellidoUsuario"]; ?></span>
+                            <span class="fw-semibold d-block"><?php echo $_SESSION["nombreUsuario"]; echo " " ;echo $_SESSION["apellidoUsuario"]; ?></span>
                             <small class="text-muted">Vendedor</small>
                           </div>
                         </div>
