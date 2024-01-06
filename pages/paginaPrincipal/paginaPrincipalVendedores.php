@@ -43,7 +43,7 @@ if($_SESSION["idUsuario"] != ""){
       rel="stylesheet"
     />
 
-   <!-- Icons -->
+    <!-- Icons -->
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
     <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
     <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
@@ -52,20 +52,27 @@ if($_SESSION["idUsuario"] != ""){
     <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
     <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
     <link rel="stylesheet" href="../../assets/css/demo.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/sweetalert2/sweetalert2.css" />
+
     <!-- Vendors CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
     <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
-
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-bs5/datatables.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/flatpickr/flatpickr.css" />
+    <!-- Row Group CSS -->
+    <link rel="stylesheet" href="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.css" />
+    <!-- Form Validation -->
+    <link rel="stylesheet" href="../../assets/vendor/libs/formvalidation/dist/css/formValidation.min.css" />
+    <link rel="stylesheet" href="../../assets/vendor/libs/sweetalert2/sweetalert2.css" />
     <!-- Page CSS -->
 
     <!-- Helpers -->
     <script src="../../assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
     <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../../assets/js/config.js"></script>
   </head>
@@ -266,17 +273,50 @@ if($_SESSION["idUsuario"] != ""){
                           </div>
                         </div>
                         <div class="mb-3 col-lg-4">
-                          <label class="form-label" for="basic-icon-default-email">Cuit</label>
+                          <label class="form-label" for="basic-icon-default-email">Cuit o Cuil</label>
                           <div class="input-group input-group-merge">
                             <span class="input-group-text"><i class='bx bx-id-card'></i></span>
                             <input name="clienteCuit" type="number" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 2046354131" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
                           </div>
                         </div>
+
+                       
+
                         <div class="mb-3 col-lg-4">
+                          <label class="form-label" for="basic-icon-default-email">Tipo de cliente</label>
+                          <select id="tipoCliente" name="clienteTipo" class="select2 form-select" data-allow-clear="true" onchange="mostrarOcultarCampos()">
+                              <?php 
+                              include '../../db/conexion.php';
+                              $buscarDepartamento = $pdo->prepare("SELECT * FROM situacionlaboralcliente ORDER BY situacionLaboralcliente_descripcion ASC");
+                              $buscarDepartamento->execute();
+                              foreach($buscarDepartamento as $b){
+                                  echo '<option value="'.$b['Id_situacionLaboralcliente'].'">'.$b['situacionLaboralcliente_descripcion'].'</option>';
+                              }
+                              ?>
+                          </select>
+                      </div>
+
+                      <div id="campoMail" class="mb-3 col-lg-4" style="display: none;">
+                          <label class="form-label" for="basic-icon-default-email">Mail</label>
+                          <div class="input-group input-group-merge">
+                              <span class="input-group-text"><i class='bx bx-id-card'></i></span>
+                              <input name="clienteMail" type="text" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 2046354131" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                          </div>
+                      </div>
+
+                      <div id="campoRemito" class="mb-3 col-lg-4" style="display: none;">
+                          <label class="form-label" for="basic-icon-default-email">Remito</label>
+                          <div class="input-group input-group-merge">
+                              <span class="input-group-text"><i class='bx bx-id-card'></i></span>
+                              <input name="clienteRemito" type="text" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 2046354131" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                          </div>
+                      </div>
+
+
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="basic-icon-default-email">Departamento</label>
                           <select id="department" name="clienteDepartamento" class="select2 form-select" data-allow-clear="true">
                                 <?php 
-                                include '../../db/conexion.php';
                                     $buscarDepartamento = $pdo->prepare("SELECT * FROM departamento ORDER BY descripcion ASC");
                                     $buscarDepartamento->execute();
                                     foreach($buscarDepartamento as $b){
@@ -286,14 +326,16 @@ if($_SESSION["idUsuario"] != ""){
                             </select>
                         </div>
 
-                        <div class="mb-3 col-lg-4">
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="locality">Localidad</label>
                               <select id="locality" name="clienteLocalidad" class="select2 form-select" data-allow-clear="true">
                                   <option value="">Selecciona un departamento primero</option>
                               </select>
                         </div>
 
-                        <div class="mb-3 col-lg-4">
+                        
+
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="basic-icon-default-email">Barrio</label>
                           <select class="form-select" name="clienteBarrio" aria-label="">
                                 <option disabled>Barrio</option>
@@ -311,7 +353,15 @@ if($_SESSION["idUsuario"] != ""){
                           </select>
                         </div>
 
-                        <div class="mb-3 col-lg-2">
+                        <div id="" class="mb-3 col-lg-3">
+                          <label class="form-label" for="basic-icon-default-email">Télefono</label>
+                          <div class="input-group input-group-merge">
+                              <span class="input-group-text"><i class='bx bx-id-card'></i></span>
+                              <input name="clienteTelefono" type="number" id="basic-icon-default-email" class="form-control" placeholder="Ejemplo: 2046354131" aria-label="john.doe" aria-describedby="basic-icon-default-email2">
+                          </div>
+                      </div>
+
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="basic-icon-default-email">Calle</label>
                           <div class="input-group input-group-merge">
                             <span class="input-group-text"><i class='bx bx-directions'></i></span>
@@ -319,7 +369,7 @@ if($_SESSION["idUsuario"] != ""){
                           </div>
                         </div>
 
-                        <div class="mb-3 col-lg-2">
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="basic-icon-default-email">Altura</label>
                           <div class="input-group input-group-merge">
                             <span class="input-group-text"><i class='bx bx-directions'></i></span>
@@ -327,7 +377,7 @@ if($_SESSION["idUsuario"] != ""){
                           </div>
                         </div>
 
-                        <div class="mb-3 col-lg-2">
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="basic-icon-default-email">Código postal</label>
                           <div class="input-group input-group-merge">
                             <span class="input-group-text"><i class="bx bx-envelope"></i></span>
@@ -335,7 +385,7 @@ if($_SESSION["idUsuario"] != ""){
                           </div>
                         </div>
 
-                        <div class="mb-3 col-lg-2">
+                        <div class="mb-3 col-lg-3">
                           <label class="form-label" for="basic-icon-default-email">Zona</label>
                           <select id="department" name="clienteZona" class="select2 form-select" data-allow-clear="true" >
                                 <?php 
@@ -363,7 +413,47 @@ if($_SESSION["idUsuario"] != ""){
                 
             </div>
             <!--/ Content -->
+            
+            <?php
+                $idUsuarios = $_SESSION["idUsuario"];
+                $buscarStock = $pdo->prepare("SELECT * FROM clientes where Rela_usuario = '$idUsuarios'");
+                $buscarStock->execute();
+            ?>
 
+          <div class="card">
+                <div class="card-datatable table-responsive">
+                
+                <table id="datatable" class="datatables-users table border-top table-bordered" data-page-length="10">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Razón Social</th>
+                            <th>Cuit/Cuil</th>
+                            <th>Télefono</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php while ($row = $buscarStock->fetch(PDO::FETCH_ASSOC)): ?>
+                        <tr>
+
+                            <td><?php echo $row['clientes_nombre']; ?></td>
+                            <td><?php echo $row['clientes_apellido']; ?></td>
+                            <td><?php echo $row['clientes_razonSocial']; ?></td>
+                            <td><?php echo $row['clientes_cuit']; ?></td>
+                            <td><?php echo $row['clientes_telefono']; ?></td>
+                            <td><button type="button" onclick="verMas(<?php echo $row['Id_clientes'];  ?>)" data-bs-toggle="modal" data-bs-target="#modalCenterverMas" class="btn btn-label-info">Ver más</button></td>
+                        </tr>
+                    <?php endwhile; ?>
+                </tbody>
+                </table>
+                                </div>
+                        
+              
+                              
+
+            <?php include_once "../modal/modalVerMas.php" ?>                  
             <!-- Footer -->
             <footer class="content-footer footer bg-footer-theme">
               <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
@@ -414,8 +504,7 @@ if($_SESSION["idUsuario"] != ""){
 
     <!--/ Layout wrapper -->
 
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
+    
     <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../../assets/vendor/libs/popper/popper.js"></script>
     <script src="../../assets/vendor/js/bootstrap.js"></script>
@@ -424,15 +513,39 @@ if($_SESSION["idUsuario"] != ""){
     <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
     <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
     <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-    <script src="../../assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
-    <script src="../../assets/js/extended-ui-sweetalert2.js"></script>
+
     <script src="../../assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
+    <script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
+    <script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
+    <script src="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
+    <script src="../../assets/vendor/libs/jszip/jszip.js"></script>
+    <script src="../../assets/vendor/libs/pdfmake/pdfmake.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
+    <script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script>
+    <!-- Flat Picker -->
+    <script src="../../assets/vendor/libs/moment/moment.js"></script>
+    <script src="../../assets/vendor/libs/flatpickr/flatpickr.js"></script>
+    <!-- Row Group JS -->
+    <script src="../../assets/vendor/libs/datatables-rowgroup/datatables.rowgroup.js"></script>
+    <script src="../../assets/vendor/libs/datatables-rowgroup-bs5/rowgroup.bootstrap5.js"></script>
+    <!-- Form Validation -->
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/Bootstrap5.min.js"></script>
+    <script src="../../assets/vendor/libs/formvalidation/dist/js/plugins/AutoFocus.min.js"></script>
+    <script src="../../assets/vendor/libs/sweetalert2/sweetalert2.js"></script>
 
+<script src="../../assets/js/extended-ui-sweetalert2.js"></script>
     <!-- Main JS -->
     <script src="../../assets/js/main.js"></script>
+
+
 
     <!-- Page JS -->
 
@@ -536,6 +649,43 @@ if($_SESSION["idUsuario"] != ""){
 
   </body>
 </html>
+
+<script>
+    function mostrarOcultarCampos() {
+        var departamentoSelect = document.getElementById("tipoCliente");
+        var campoMail = document.getElementById("campoMail");
+        var campoRemito = document.getElementById("campoRemito");
+
+        if (departamentoSelect.value == 1 || departamentoSelect.value == 2) {
+            campoMail.style.display = "block";
+            campoRemito.style.display = "none";
+        } else if (departamentoSelect.value == 3) {
+            campoMail.style.display = "none";
+            campoRemito.style.display = "block";
+        } else {
+            campoMail.style.display = "none";
+            campoRemito.style.display = "none";
+        }
+    }
+</script>
+
+  <script>
+    $(document).ready(function() {
+        $('#datatable').DataTable();
+    });
+</script>
+<script>
+    function verMas(id){
+      $.ajax({
+        type:"POST",
+        url: "../../php/clientes/verDetallesClientes.php",
+        data: "id=" + id,
+        success: function(r){
+          $('#modal-body-verMas').html(r);
+        }
+    });
+    }
+  </script>
 
 <?php 
 
