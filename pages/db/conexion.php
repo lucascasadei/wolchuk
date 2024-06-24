@@ -6,8 +6,8 @@ $suserLocal = 'root';
 $spassLocal = '';
 
 // Definir las credenciales de conexión para el entorno de hosting
-$sconHost = "mysql:dbname=u277628716_chimpance;host=localhost";
-$suserHost = 'u277628716_chimpance';
+$sconHost = "mysql:dbname=u277628716_wolchuk;host=localhost";
+$suserHost = 'u277628716_wolchuk';
 $spassHost = 'Cf4b1a7123';
 
 // Determinar si el script se está ejecutando en un entorno local
@@ -17,7 +17,7 @@ $isLocal = ($_SERVER['REMOTE_ADDR'] == '127.0.0.1' || $_SERVER['REMOTE_ADDR'] ==
 $scon = $isLocal ? $sconLocal : $sconHost;
 $suser = $isLocal ? $suserLocal : $suserHost;
 $spass = $isLocal ? $spassLocal : $spassHost;
-$dbName = $isLocal ? "chimpance" : "u277628716_chimpance";
+$dbName = $isLocal ? "chimpance" : "u277628716_wolchuk";
 
 $_SESSION["bd"] = $dbName;
 $msg = '';
