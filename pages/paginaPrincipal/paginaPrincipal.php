@@ -1,856 +1,990 @@
 
 <!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta content="Codescandy" name="author" />
+      <title>Dashboard eCommerce HTML Template - FreshCart</title>
+      <!-- Favicon icon-->
+      <link rel="shortcut icon" type="image/x-icon" href="../../freshcart-1-2-1/dist/assets/images/favicon/favicon.ico" />
 
-<html
-  lang="en"
-  class="light-style layout-menu-fixed"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../../assets/"
-  data-template="horizontal-menu-template-no-customizer"
->
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+      <!-- Libs CSS -->
+      <link href="../../freshcart-1-2-1/dist/assets/libs/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+      <link href="../../freshcart-1-2-1/dist/assets/libs/feather-webfont/dist/feather-icons.css" rel="stylesheet" />
+      <link href="../../freshcart-1-2-1/dist/assets/libs/simplebar/dist/simplebar.min.css" rel="stylesheet" />
 
-    <title>Cards Gamifications- UI elements | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
+      <!-- Theme CSS -->
+      <link rel="stylesheet" href="../../freshcart-1-2-1/dist/assets/css/theme.min.css" />
+   </head>
 
-    <meta name="description" content="" />
+   <body>
+      <!-- main -->
+      <div>
+         <!-- navbar -->
+         <nav class="navbar navbar-expand-lg navbar-glass">
+            <div class="container-fluid">
+               <div class="d-flex justify-content-between align-items-center w-100">
+                  <div class="d-flex align-items-center">
+                     <a class="text-inherit d-block d-xl-none me-4" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-text-indent-right" viewBox="0 0 16 16">
+                           <path
+                              d="M2 3.5a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5zm10.646 2.146a.5.5 0 0 1 .708.708L11.707 8l1.647 1.646a.5.5 0 0 1-.708.708l-2-2a.5.5 0 0 1 0-.708l2-2zM2 6.5a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1h-6a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                     </a>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../../assets/img/favicon/favicon.ico" />
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
-    <link rel="stylesheet" href="../../assets/vendor/fonts/fontawesome.css" />
-    <link rel="stylesheet" href="../../assets/vendor/fonts/flag-icons.css" />
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/core.css" />
-    <link rel="stylesheet" href="../../assets/vendor/css/rtl/theme-default.css" />
-    <link rel="stylesheet" href="../../assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
-    <link rel="stylesheet" href="../../assets/vendor/libs/typeahead-js/typeahead.css" />
-
-    <!-- Page CSS -->
-
-    <!-- Helpers -->
-    <script src="../../assets/vendor/js/helpers.js"></script>
-
-    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
-    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../../assets/js/config.js"></script>
-  </head>
-
-  <body>
-    <!-- Layout wrapper -->
-    <div class="layout-wrapper layout-navbar-full layout-horizontal layout-without-menu">
-      <div class="layout-container">
-        <!-- Navbar -->
-
-        <nav class="layout-navbar navbar navbar-expand-xl align-items-center bg-navbar-theme" id="layout-navbar">
-          <div class="container-xxl">
-            <div class="navbar-brand app-brand demo d-none d-xl-flex py-0 me-4">
-              <a href="index.html" class="app-brand-link gap-2">
-                <span class="app-brand-logo demo">
-                  <svg
-                    width="25"
-                    viewBox="0 0 25 42"
-                    version="1.1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                  >
-                    <defs>
-                      <path
-                        d="M13.7918663,0.358365126 L3.39788168,7.44174259 C0.566865006,9.69408886 -0.379795268,12.4788597 0.557900856,15.7960551 C0.68998853,16.2305145 1.09562888,17.7872135 3.12357076,19.2293357 C3.8146334,19.7207684 5.32369333,20.3834223 7.65075054,21.2172976 L7.59773219,21.2525164 L2.63468769,24.5493413 C0.445452254,26.3002124 0.0884951797,28.5083815 1.56381646,31.1738486 C2.83770406,32.8170431 5.20850219,33.2640127 7.09180128,32.5391577 C8.347334,32.0559211 11.4559176,30.0011079 16.4175519,26.3747182 C18.0338572,24.4997857 18.6973423,22.4544883 18.4080071,20.2388261 C17.963753,17.5346866 16.1776345,15.5799961 13.0496516,14.3747546 L10.9194936,13.4715819 L18.6192054,7.984237 L13.7918663,0.358365126 Z"
-                        id="path-1"
-                      ></path>
-                      <path
-                        d="M5.47320593,6.00457225 C4.05321814,8.216144 4.36334763,10.0722806 6.40359441,11.5729822 C8.61520715,12.571656 10.0999176,13.2171421 10.8577257,13.5094407 L15.5088241,14.433041 L18.6192054,7.984237 C15.5364148,3.11535317 13.9273018,0.573395879 13.7918663,0.358365126 C13.5790555,0.511491653 10.8061687,2.3935607 5.47320593,6.00457225 Z"
-                        id="path-3"
-                      ></path>
-                      <path
-                        d="M7.50063644,21.2294429 L12.3234468,23.3159332 C14.1688022,24.7579751 14.397098,26.4880487 13.008334,28.506154 C11.6195701,30.5242593 10.3099883,31.790241 9.07958868,32.3040991 C5.78142938,33.4346997 4.13234973,34 4.13234973,34 C4.13234973,34 2.75489982,33.0538207 2.37032616e-14,31.1614621 C-0.55822714,27.8186216 -0.55822714,26.0572515 -4.05231404e-15,25.8773518 C0.83734071,25.6075023 2.77988457,22.8248993 3.3049379,22.52991 C3.65497346,22.3332504 5.05353963,21.8997614 7.50063644,21.2294429 Z"
-                        id="path-4"
-                      ></path>
-                      <path
-                        d="M20.6,7.13333333 L25.6,13.8 C26.2627417,14.6836556 26.0836556,15.9372583 25.2,16.6 C24.8538077,16.8596443 24.4327404,17 24,17 L14,17 C12.8954305,17 12,16.1045695 12,15 C12,14.5672596 12.1403557,14.1461923 12.4,13.8 L17.4,7.13333333 C18.0627417,6.24967773 19.3163444,6.07059163 20.2,6.73333333 C20.3516113,6.84704183 20.4862915,6.981722 20.6,7.13333333 Z"
-                        id="path-5"
-                      ></path>
-                    </defs>
-                    <g id="g-app-brand" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="Brand-Logo" transform="translate(-27.000000, -15.000000)">
-                        <g id="Icon" transform="translate(27.000000, 15.000000)">
-                          <g id="Mask" transform="translate(0.000000, 8.000000)">
-                            <mask id="mask-2" fill="white">
-                              <use xlink:href="#path-1"></use>
-                            </mask>
-                            <use fill="#696cff" xlink:href="#path-1"></use>
-                            <g id="Path-3" mask="url(#mask-2)">
-                              <use fill="#696cff" xlink:href="#path-3"></use>
-                              <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-3"></use>
-                            </g>
-                            <g id="Path-4" mask="url(#mask-2)">
-                              <use fill="#696cff" xlink:href="#path-4"></use>
-                              <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-4"></use>
-                            </g>
-                          </g>
-                          <g
-                            id="Triangle"
-                            transform="translate(19.000000, 11.000000) rotate(-300.000000) translate(-19.000000, -11.000000) "
-                          >
-                            <use fill="#696cff" xlink:href="#path-5"></use>
-                            <use fill-opacity="0.2" fill="#FFFFFF" xlink:href="#path-5"></use>
-                          </g>
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                </span>
-                <span class="app-brand-text demo menu-text fw-bolder">Sneat</span>
-              </a>
-
-              <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-xl-none">
-                <i class="bx bx-chevron-left bx-sm align-middle"></i>
-              </a>
-            </div>
-
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="bx bx-menu bx-sm"></i>
-              </a>
-            </div>
-
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Language -->
-                <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <i class="fi fi-us fis rounded-circle fs-3 me-1"></i>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="en">
-                        <i class="fi fi-us fis rounded-circle fs-4 me-1"></i>
-                        <span class="align-middle">English</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="fr">
-                        <i class="fi fi-fr fis rounded-circle fs-4 me-1"></i>
-                        <span class="align-middle">France</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="de">
-                        <i class="fi fi-de fis rounded-circle fs-4 me-1"></i>
-                        <span class="align-middle">German</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="pt">
-                        <i class="fi fi-pt fis rounded-circle fs-4 me-1"></i>
-                        <span class="align-middle">Portuguese</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ Language -->
-
-                <!-- Search -->
-                <li class="nav-item navbar-search-wrapper me-2 me-xl-0">
-                  <a class="nav-link search-toggler" href="javascript:void(0);">
-                    <i class="bx bx-search bx-sm"></i>
-                  </a>
-                </li>
-                <!-- /Search -->
-
-                <!-- Style Switcher -->
-                <li class="nav-item me-2 me-xl-0">
-                  <a class="nav-link style-switcher-toggle hide-arrow" href="javascript:void(0);">
-                    <i class="bx bx-sm"></i>
-                  </a>
-                </li>
-                <!--/ Style Switcher -->
-
-                <!-- Quick links  -->
-                <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    aria-expanded="false"
-                  >
-                    <i class="bx bx-grid-alt bx-sm"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-end py-0">
-                    <div class="dropdown-menu-header border-bottom">
-                      <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">Shortcuts</h5>
-                        <a
-                          href="javascript:void(0)"
-                          class="dropdown-shortcuts-add text-body"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Add shortcuts"
-                          ><i class="bx bx-sm bx-plus-circle"></i
-                        ></a>
-                      </div>
-                    </div>
-                    <div class="dropdown-shortcuts-list scrollable-container">
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-calendar fs-4"></i>
-                          </span>
-                          <a href="app-calendar.html" class="stretched-link">Calendar</a>
-                          <small class="text-muted mb-0">Appointments</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-food-menu fs-4"></i>
-                          </span>
-                          <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
-                          <small class="text-muted mb-0">Manage Accounts</small>
-                        </div>
-                      </div>
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-user fs-4"></i>
-                          </span>
-                          <a href="app-user-list.html" class="stretched-link">User App</a>
-                          <small class="text-muted mb-0">Manage Users</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-check-shield fs-4"></i>
-                          </span>
-                          <a href="app-access-roles.html" class="stretched-link">Role Management</a>
-                          <small class="text-muted mb-0">Permission</small>
-                        </div>
-                      </div>
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-pie-chart-alt-2 fs-4"></i>
-                          </span>
-                          <a href="index.html" class="stretched-link">Dashboard</a>
-                          <small class="text-muted mb-0">User Profile</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-cog fs-4"></i>
-                          </span>
-                          <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
-                          <small class="text-muted mb-0">Account Settings</small>
-                        </div>
-                      </div>
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-help-circle fs-4"></i>
-                          </span>
-                          <a href="pages-help-center-landing.html" class="stretched-link">Help Center</a>
-                          <small class="text-muted mb-0">FAQs & Articles</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon bg-label-secondary rounded-circle mb-2">
-                            <i class="bx bx-window-open fs-4"></i>
-                          </span>
-                          <a href="modal-examples.html" class="stretched-link">Modals</a>
-                          <small class="text-muted mb-0">Useful Popups</small>
-                        </div>
-                      </div>
-                    </div>
+                     <form role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                     </form>
                   </div>
-                </li>
-                <!-- Quick links -->
+                  <div>
+                     <ul class="list-unstyled d-flex align-items-center mb-0 ms-5 ms-lg-0">
+                        <li class="dropdown-center">
+                           <a class="position-relative btn-icon btn-ghost-secondary btn rounded-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="bi bi-bell fs-5"></i>
+                              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger mt-2 ms-n2">
+                                 2
+                                 <span class="visually-hidden">unread messages</span>
+                              </span>
+                           </a>
+                           <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0 border-0">
+                              <div class="border-bottom p-5 d-flex justify-content-between align-items-center">
+                                 <div>
+                                    <h5 class="mb-1">Notifications</h5>
+                                    <p class="mb-0 small">You have 2 unread messages</p>
+                                 </div>
+                                 <a href="#!" class="text-muted">
+                                    <a href="#" class="btn btn-ghost-secondary btn-icon rounded-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Mark all as read">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-check2-all text-success" viewBox="0 0 16 16">
+                                          <path
+                                             d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z" />
+                                          <path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z" />
+                                       </svg>
+                                    </a>
+                                 </a>
+                              </div>
+                              <div data-simplebar style="height: 250px">
+                                 <!-- List group -->
+                                 <ul class="list-group list-group-flush notification-list-scroll fs-6">
+                                    <!-- List group item -->
+                                    <li class="list-group-item px-5 py-4 list-group-item-action active">
+                                       <a href="#!" class="text-muted">
+                                          <div class="d-flex">
+                                             <img src="../../freshcart-1-2-1/dist/assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle" />
+                                             <div class="ms-4">
+                                                <p class="mb-1">
+                                                   <span class="text-dark">Your order is placed</span>
+                                                   waiting for shipping
+                                                </p>
+                                                <span>
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock text-muted" viewBox="0 0 16 16">
+                                                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                                   </svg>
+                                                   <small class="ms-2">1 minute ago</small>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </li>
+                                    <li class="list-group-item px-5 py-4 list-group-item-action">
+                                       <a href="#!" class="text-muted">
+                                          <div class="d-flex">
+                                             <img src="../../freshcart-1-2-1/dist/assets/images/avatar/avatar-5.jpg" alt="" class="avatar avatar-md rounded-circle" />
+                                             <div class="ms-4">
+                                                <p class="mb-1">
+                                                   <span class="text-dark">Jitu Chauhan</span>
+                                                   answered to your pending order list with notes
+                                                </p>
+                                                <span>
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock text-muted" viewBox="0 0 16 16">
+                                                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                                   </svg>
+                                                   <small class="ms-2">2 days ago</small>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </li>
+                                    <li class="list-group-item px-5 py-4 list-group-item-action">
+                                       <a href="#!" class="text-muted">
+                                          <div class="d-flex">
+                                             <img src="../../freshcart-1-2-1/dist/assets/images/avatar/avatar-2.jpg" alt="" class="avatar avatar-md rounded-circle" />
+                                             <div class="ms-4">
+                                                <p class="mb-1">
+                                                   <span class="text-dark">You have new messages</span>
+                                                   2 unread messages
+                                                </p>
+                                                <span>
+                                                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock text-muted" viewBox="0 0 16 16">
+                                                      <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                                                      <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                                                   </svg>
+                                                   <small class="ms-2">3 days ago</small>
+                                                </span>
+                                             </div>
+                                          </div>
+                                       </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                              <div class="border-top px-5 py-4 text-center">
+                                 <a href="#!">View All</a>
+                              </div>
+                           </div>
+                        </li>
+                        <li class="dropdown ms-4">
+                           <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <img src="../../freshcart-1-2-1/dist/assets/images/avatar/avatar-1.jpg" alt="" class="avatar avatar-md rounded-circle" />
+                           </a>
 
-                <!-- Notification -->
-                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    aria-expanded="false"
-                  >
-                    <i class="bx bx-bell bx-sm"></i>
-                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end py-0">
-                    <li class="dropdown-menu-header border-bottom">
-                      <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">Notification</h5>
-                        <a
-                          href="javascript:void(0)"
-                          class="dropdown-notifications-all text-body"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Mark all as read"
-                          ><i class="bx fs-4 bx-envelope-open"></i
-                        ></a>
-                      </div>
-                    </li>
-                    <li class="dropdown-notifications-list scrollable-container">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                           <div class="dropdown-menu dropdown-menu-end p-0">
+                              <div class="lh-1 px-5 py-4 border-bottom">
+                                 <h5 class="mb-1 h6">FreshCart Admin</h5>
+                                 <small>admindemo@email.com</small>
                               </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Congratulation Lettie 🎉</h6>
-                              <p class="mb-0">Won the monthly best seller gold badge</p>
-                              <small class="text-muted">1h ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
+
+                              <ul class="list-unstyled px-2 py-3">
+                                 <li>
+                                    <a class="dropdown-item" href="#!">Home</a>
+                                 </li>
+                                 <li>
+                                    <a class="dropdown-item" href="#!">Profile</a>
+                                 </li>
+
+                                 <li>
+                                    <a class="dropdown-item" href="#!">Settings</a>
+                                 </li>
+                              </ul>
+                              <div class="border-top px-5 py-3">
+                                 <a href="#">Log Out</a>
                               </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Charles Franklin</h6>
-                              <p class="mb-0">Accepted your connection</p>
-                              <small class="text-muted">12hr ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
+                           </div>
                         </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/2.png" alt class="w-px-40 h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">New Message ✉️</h6>
-                              <p class="mb-0">You have new message from Natalie</p>
-                              <small class="text-muted">1h ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-success"
-                                  ><i class="bx bx-cart"></i
-                                ></span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Whoo! You have new order 🛒</h6>
-                              <p class="mb-0">ACME Inc. made new order $1,154</p>
-                              <small class="text-muted">1 day ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/9.png" alt class="w-px-40 h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Application has been approved 🚀</h6>
-                              <p class="mb-0">Your ABC project application has been approved.</p>
-                              <small class="text-muted">2 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-success"
-                                  ><i class="bx bx-pie-chart-alt"></i
-                                ></span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Monthly report is generated</h6>
-                              <p class="mb-0">July monthly financial report is generated</p>
-                              <small class="text-muted">3 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/5.png" alt class="w-px-40 h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Send connection request</h6>
-                              <p class="mb-0">Peter sent you connection request</p>
-                              <small class="text-muted">4 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/6.png" alt class="w-px-40 h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">New message from Jane</h6>
-                              <p class="mb-0">Your have new message from Jane</p>
-                              <small class="text-muted">5 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-warning"
-                                  ><i class="bx bx-error"></i
-                                ></span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">CPU is running high</h6>
-                              <p class="mb-0">CPU Utilization Percent is currently at 88.63%,</p>
-                              <small class="text-muted">5 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="bx bx-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-menu-footer border-top">
-                      <a href="javascript:void(0);" class="dropdown-item d-flex justify-content-center p-3">
-                        View all notifications
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ Notification -->
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="../../assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
-                            </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
-                            <small class="text-muted">Admin</small>
-                          </div>
-                        </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-profile-user.html">
-                        <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-billing.html">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-help-center-landing.html">
-                        <i class="bx bx-support me-2"></i>
-                        <span class="align-middle">Help</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-faq.html">
-                        <i class="bx bx-help-circle me-2"></i>
-                        <span class="align-middle">FAQ</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-pricing.html">
-                        <i class="bx bx-dollar me-2"></i>
-                        <span class="align-middle">Pricing</span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-              </ul>
+                     </ul>
+                  </div>
+               </div>
             </div>
+         </nav>
 
-            <!-- Search Small Screens -->
-            <div class="navbar-search-wrapper search-input-wrapper container-xxl d-none">
-              <input
-                type="text"
-                class="form-control search-input border-0"
-                placeholder="Search..."
-                aria-label="Search..."
-              />
-              <i class="bx bx-x bx-sm search-toggler cursor-pointer"></i>
-            </div>
-          </div>
-        </nav>
-
-        <!-- / Navbar -->
-
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Menu -->
-            <aside id="layout-menu" class="layout-menu-horizontal menu-horizontal menu bg-menu-theme flex-grow-0">
-              <div class="container-xxl d-flex h-100">
-                <ul class="menu-inner">
-                  <!-- Dashboards -->
-                  <li class="menu-item">
-                    <a href="javascript:void(0)" class="menu-link menu-toggle">
-                      <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                      <div data-i18n="Clientes">Clientes</div>
-                    </a>
-                    <ul class="menu-sub">
-                      <li class="menu-item">
-                        <a href="dashboards-analytics.html" class="menu-link">
-                          <i class="menu-icon tf-icons bx bx-pie-chart-alt-2"></i>
-                          <div data-i18n="Agregar clientes">Agregar clientes</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="dashboards-crm.html" class="menu-link">
-                          <i class="menu-icon tf-icons bx bx-shape-circle"></i>
-                          <div data-i18n="CRM">CRM</div>
-                        </a>
-                      </li>
-                      <li class="menu-item">
-                        <a href="dashboards-ecommerce.html" class="menu-link">
-                          <i class="menu-icon tf-icons bx bx-analyse"></i>
-                          <div data-i18n="eCommerce">eCommerce</div>
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </aside>
-            <!-- / Menu -->
-
-            <!-- Content -->
-
-            <div class="container-xxl flex-grow-1 container-p-y">
-              <h4 class="fw-bold py-3 mb-4">
-                <span class="text-muted fw-light">UI Elements /</span> Cards Gamifications
-              </h4>
-
-              <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4 order-lg-1 order-2">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-8">
-                        <div class="card-body">
-                          <h6 class="card-title mb-1 text-nowrap">Congratulations Katie!</h6>
-                          <small class="d-block mb-3 text-nowrap">Best seller of the month</small>
-
-                          <h5 class="card-title text-primary mb-1">$48.9k</h5>
-                          <small class="d-block mb-3 text-muted">78% of target</small>
-
-                          <a href="javascript:;" class="btn btn-sm btn-primary">View sales</a>
-                        </div>
-                      </div>
-                      <div class="col-4 pt-3 ps-0">
-                        <img
-                          src="../../assets/img/illustrations/prize-light.png"
-                          width="90"
-                          height="140"
-                          class="rounded-start"
-                          alt="View Sales"
-                        />
-                      </div>
-                    </div>
+         <div class="main-wrapper">
+            <!-- navbar vertical -->
+            <!-- navbar -->
+            <nav class="navbar-vertical-nav d-none d-xl-block">
+               <div class="navbar-vertical">
+                  <div class="px-4 py-5">
+                     <a href="../../freshcart-1-2-1/dist/index.html" class="navbar-brand">
+                        <img src="../../freshcart-1-2-1/dist/assets/images/logo/freshcart-logo.svg" alt="" />
+                     </a>
                   </div>
-                </div>
-                <div class="col-lg-8 order-lg-2 order-1 align-self-end mb-4">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
-                          <p class="mb-4">
-                            You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
-                            your profile.
-                          </p>
+                  <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+                     <ul class="navbar-nav flex-column" id="sideNavbar">
+                        <li class="nav-item">
+                           <a class="nav-link active" href="../../freshcart-1-2-1/dist/dashboard/index.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+                                 <span class="nav-link-text">Inicio</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Store Managements</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/products.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+                                 <span class="nav-link-text">Products</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/categories.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+                                 <span class="nav-link-text">Categories</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navCategoriesOrders" aria-expanded="false" aria-controls="navCategoriesOrders">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                                 <span class="nav-link-text">Orders</span>
+                              </div>
+                           </a>
+                           <div id="navCategoriesOrders" class="collapse" data-bs-parent="#sideNavbar">
+                              <ul class="nav flex-column">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/order-list.html">List</a>
+                                 </li>
+                                 <!-- Nav item -->
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/order-single.html">Single</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
 
-                          <a href="javascript:;" class="btn btn-sm btn-label-primary">View Badges</a>
-                        </div>
-                      </div>
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0 px-0 px-md-4">
-                          <img
-                            src="../../assets/img/illustrations/man-with-laptop-light.png"
-                            height="140"
-                            alt="View Badge User"
-                            data-app-light-img="illustrations/man-with-laptop-light.png"
-                            data-app-dark-img="illustrations/man-with-laptop-dark.png"
-                          />
-                        </div>
-                      </div>
-                    </div>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/vendor-grid.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-shop"></i></span>
+                                 <span class="nav-link-text">Sellers / Vendors</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/customers.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                                 <span class="nav-link-text">Customers</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/reviews.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-star"></i></span>
+                                 <span class="nav-link-text">Reviews</span>
+                              </div>
+                           </a>
+                        </li>
+                        <!-- Nav item -->
+                        <li class="nav-item">
+                           <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelFirst" aria-expanded="false" aria-controls="navMenuLevelFirst">
+                              <span class="nav-link-icon"><i class="bi bi-arrow-90deg-down"></i></span>
+                              <span class="nav-link-text">Menu Level</span>
+                           </a>
+                           <div id="navMenuLevelFirst" class="collapse" data-bs-parent="#sideNavbar">
+                              <ul class="nav flex-column">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelSecond1" aria-expanded="false" aria-controls="navMenuLevelSecond1">Two Level</a>
+                                    <div id="navMenuLevelSecond1" class="collapse" data-bs-parent="#navMenuLevel">
+                                       <ul class="nav flex-column">
+                                          <li class="nav-item">
+                                             <a class="nav-link" href="#">NavItem 1</a>
+                                          </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link" href="#">NavItem 2</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                                 <li class="nav-item">
+                                    <a
+                                       class="nav-link collapsed"
+                                       href="#"
+                                       data-bs-toggle="collapse"
+                                       data-bs-target="#navMenuLevelThreeOne1"
+                                       aria-expanded="false"
+                                       aria-controls="navMenuLevelThreeOne1">
+                                       Three Level
+                                    </a>
+                                    <div id="navMenuLevelThreeOne1" class="collapse" data-bs-parent="#navMenuLevel">
+                                       <ul class="nav flex-column">
+                                          <li class="nav-item">
+                                             <a
+                                                class="nav-link collapsed"
+                                                href="#"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#navMenuLevelThreeTwo"
+                                                aria-expanded="false"
+                                                aria-controls="navMenuLevelThreeTwo">
+                                                NavItem 1
+                                             </a>
+                                             <div id="navMenuLevelThreeTwo" class="collapse collapse" data-bs-parent="#navMenuLevelThree">
+                                                <ul class="nav flex-column">
+                                                   <li class="nav-item">
+                                                      <a class="nav-link" href="#">NavChild Item 1</a>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </li>
+                                          <li class="nav-item">
+                                             <a class="nav-link" href="#">Nav Item 2</a>
+                                          </li>
+                                       </ul>
+                                    </div>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Site Settings</span>
+                           <span class="badge bg-light-info text-dark-info">Coming Soon</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-newspaper"></i></span>
+                                 <span class="nav-link-text">Blog</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-images"></i></span>
+                                 <span class="nav-link-text">Media</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-gear"></i></span>
+                                 <span class="nav-link-text">Store Settings</span>
+                              </div>
+                           </a>
+                        </li>
+
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Support</span>
+                           <span class="badge bg-light-info text-dark-info">Coming Soon</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-headphones"></i></span>
+                                 <span class="nav-link-text">Support Ticket</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-question-circle"></i></span>
+                                 <span class="nav-link-text">Help Center</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
+                                 <span class="nav-link-text">How FreshCart Works</span>
+                              </div>
+                           </a>
+                        </li>
+
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Our Apps</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-apple"></i></span>
+                                 <span class="nav-link-text">Apple Store</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-google-play"></i></span>
+                                 <span class="nav-link-text">Google Play Store</span>
+                              </div>
+                           </a>
+                        </li>
+                     </ul>
                   </div>
-                </div>
-                <div class="col-lg-8 order-lg-3 col-12 align-self-end order-4 mb-4">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-sm-5 text-center text-sm-left">
-                        <div class="card-body pb-0">
-                          <img
-                            src="../../assets/img/illustrations/sitting-girl-with-laptop-light.png"
-                            height="140"
-                            alt="Target User"
-                            data-app-dark-img="illustrations/sitting-girl-with-laptop-dark.png"
-                            data-app-light-img="illustrations/sitting-girl-with-laptop-light.png"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-sm-7">
-                        <div class="card-body">
-                          <h5 class="card-title">Welcome back Anna!</h5>
-                          <p class="mb-4">
-                            You have 12 task to finish today, Your already completed 189 task good job.
-                          </p>
+               </div>
+            </nav>
 
-                          <span class="badge bg-label-primary">78% of target</span>
-                        </div>
-                      </div>
-                    </div>
+            <nav class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac" tabindex="-1" id="offcanvasExample">
+               <div class="navbar-vertical">
+                  <div class="px-4 py-5 d-flex justify-content-between align-items-center">
+                     <a href="../../freshcart-1-2-1/dist/index.html" class="navbar-brand">
+                        <img src="../../freshcart-1-2-1/dist/assets/images/logo/freshcart-logo.svg" alt="" />
+                     </a>
+                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
-                </div>
-                <div class="col-md-6 col-md-4 col-lg-4 order-lg-4 order-3 mb-4">
-                  <div class="card">
-                    <div class="d-flex align-items-end row">
-                      <div class="col-4 pt-3 text-center">
-                        <img
-                          src="../../assets/img/illustrations/superman-flying-light.png"
-                          width="100"
-                          height="140"
-                          class="rounded-start"
-                          alt="upgrade account"
-                          data-app-dark-img="illustrations/superman-flying-dark.png"
-                          data-app-light-img="illustrations/superman-flying-light.png"
-                        />
-                      </div>
-                      <div class="col-8 text-center">
-                        <div class="card-body">
-                          <h6 class="card-title mb-1">Upgrade Account</h6>
-                          <small class="d-block mb-3">Add 15 team members</small>
+                  <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+                     <ul class="navbar-nav flex-column">
+                        <li class="nav-item">
+                           <a class="nav-link active" href="../../freshcart-1-2-1/dist/dashboard/index.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+                                 <span>Dashboard</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Store Managements</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/products.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+                                 <span class="nav-link-text">Products</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/categories.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-list-task"></i></span>
+                                 <span class="nav-link-text">Categories</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navOrders" aria-expanded="false" aria-controls="navOrders">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-bag"></i></span>
+                                 <span class="nav-link-text">Orders</span>
+                              </div>
+                           </a>
+                           <div id="navOrders" class="collapse" data-bs-parent="#sideNavbar">
+                              <ul class="nav flex-column">
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/order-list.html">List</a>
+                                 </li>
+                                 <!-- Nav item -->
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/order-single.html">Single</a>
+                                 </li>
+                              </ul>
+                           </div>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/vendor-grid.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-shop"></i></span>
+                                 <span class="nav-link-text">Sellers / Vendors</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/customers.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                                 <span class="nav-link-text">Customers</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="../../freshcart-1-2-1/dist/dashboard/reviews.html">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-star"></i></span>
+                                 <span class="nav-link-text">Reviews</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Site Settings</span>
+                           <span class="badge bg-light-info text-dark-info">Coming Soon</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-newspaper"></i></span>
+                                 <span class="nav-link-text">Blog</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-images"></i></span>
+                                 <span class="nav-link-text">Media</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-gear"></i></span>
+                                 <span class="nav-link-text">Store Settings</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Support</span>
+                           <span class="badge bg-light-info text-dark-info">Coming Soon</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-headphones"></i></span>
+                                 <span class="nav-link-text">Support Ticket</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-question-circle"></i></span>
+                                 <span class="nav-link-text">Help Center</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-infinity"></i></span>
+                                 <span class="nav-link-text">How FreshCart Works</span>
+                              </div>
+                           </a>
+                        </li>
 
-                          <h5 class="card-title text-info mb-1">$129</h5>
-                          <small class="d-block mb-3 text-muted">20% OFF</small>
-
-                          <a href="javascript:;" class="btn btn-sm btn-info">Upgrade</a>
-                        </div>
-                      </div>
-                    </div>
+                        <li class="nav-item mt-6 mb-3">
+                           <span class="nav-label">Our Apps</span>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-apple"></i></span>
+                                 <span class="nav-link-text">Apple Store</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link disabled" href="#!">
+                              <div class="d-flex align-items-center">
+                                 <span class="nav-link-icon"><i class="bi bi-google-play"></i></span>
+                                 <span class="nav-link-text">Google Play Store</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li id="navMenuLevel" class="collapse" data-bs-parent="#sideNavbar">
+                           <ul class="nav flex-column">
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelSecond2" aria-expanded="false" aria-controls="navMenuLevelSecond2">Two Level</a>
+                                 <div id="navMenuLevelSecond2" class="collapse" data-bs-parent="#navMenuLevel">
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item">
+                                          <a class="nav-link" href="#">NavItem 1</a>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" href="#">NavItem 2</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#navMenuLevelThree2" aria-expanded="false" aria-controls="navMenuLevelThree2">
+                                    Three Level
+                                 </a>
+                                 <div id="navMenuLevelThree2" class="collapse" data-bs-parent="#navMenuLevel">
+                                    <ul class="nav flex-column">
+                                       <li class="nav-item">
+                                          <a
+                                             class="nav-link collapsed"
+                                             href="#"
+                                             data-bs-toggle="collapse"
+                                             data-bs-target="#navMenuLevelThree3"
+                                             aria-expanded="false"
+                                             aria-controls="navMenuLevelThree3">
+                                             NavItem 1
+                                          </a>
+                                          <div id="navMenuLevelThree3" class="collapse collapse" data-bs-parent="#navMenuLevelThree">
+                                             <ul class="nav flex-column">
+                                                <li class="nav-item">
+                                                   <a class="nav-link" href="#">NavChild Item 1</a>
+                                                </li>
+                                             </ul>
+                                          </div>
+                                       </li>
+                                       <li class="nav-item">
+                                          <a class="nav-link" href="#">Nav Item 2</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!--/ Content -->
+               </div>
+            </nav>
 
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
-                </div>
-                <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
+            <!-- main wrapper -->
+            <main class="main-content-wrapper">
+               <section class="container">
+                 
+                  <!-- table -->
+                  <div class="table-responsive-xl mb-6 mb-lg-0">
+                     <div class="row flex-nowrap pb-3 pb-lg-0">
+                        <div class="col-lg-4 col-12 mb-6">
+                           <!-- card -->
+                           <div class="card h-100 card-lg">
+                              <!-- card body -->
+                              <div class="card-body p-6">
+                                 <!-- heading -->
+                                 <div class="d-flex justify-content-between align-items-center mb-6">
+                                    <div>
+                                       <h4 class="mb-0 fs-5">Total</h4>
+                                    </div>
+                                    <div class="icon-shape icon-md bg-light-danger text-dark-danger rounded-circle">
+                                       <i class="bi bi-currency-dollar fs-5"></i>
+                                    </div>
+                                 </div>
+                                 <!-- project number -->
+                                 <div class="lh-1">
+                                    <h1 class="mb-2 fw-bold fs-2">$93,438.78</h1>
+                                    <span>Monthly revenue</span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-12 mb-6">
+                           <!-- card -->
+                           <div class="card h-100 card-lg">
+                              <!-- card body -->
+                              <div class="card-body p-6">
+                                 <!-- heading -->
+                                 <div class="d-flex justify-content-between align-items-center mb-6">
+                                    <div>
+                                       <h4 class="mb-0 fs-5">Locales</h4>
+                                    </div>
+                                    <div class="icon-shape icon-md bg-light-warning text-dark-warning rounded-circle">
+                                       <i class="bi bi-cart fs-5"></i>
+                                    </div>
+                                 </div>
+                                 <!-- project number -->
+                                 <div class="lh-1">
+                                    <h1 class="mb-2 fw-bold fs-2">42,339</h1>
+                                    <span>
+                                       <span class="text-dark me-1">35+</span>
+                                       New Sales
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-12 mb-6">
+                           <!-- card -->
+                           <div class="card h-100 card-lg">
+                              <!-- card body -->
+                              <div class="card-body p-6">
+                                 <!-- heading -->
+                                 <div class="d-flex justify-content-between align-items-center mb-6">
+                                    <div>
+                                       <h4 class="mb-0 fs-5">Preventa</h4>
+                                    </div>
+                                    <div class="icon-shape icon-md bg-light-info text-dark-info rounded-circle">
+                                       <i class="bi bi-people fs-5"></i>
+                                    </div>
+                                 </div>
+                                 <!-- project number -->
+                                 <div class="lh-1">
+                                    <h1 class="mb-2 fw-bold fs-2">39,354</h1>
+                                    <span>
+                                       <span class="text-dark me-1">30+</span>
+                                       new in 2 days
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
 
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://themeselection.com/support/"
-                    target="_blank"
-                    class="footer-link d-none d-sm-inline-block"
-                    >Support</a
-                  >
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!--/ Content wrapper -->
-        </div>
-
-        <!--/ Layout container -->
+                  <!-- row -->
+                  <div class="row">
+                     <div class="col-xl-8 col-lg-6 col-md-12 col-12 mb-6">
+                        <!-- card -->
+                        <div class="card h-100 card-lg">
+                           <div class="card-body p-6">
+                              <!-- heading -->
+                              <div class="d-flex justify-content-between">
+                                 <div>
+                                    <h3 class="mb-1 fs-5">Revenue</h3>
+                                    <small>(+63%) than last year)</small>
+                                 </div>
+                                 <div>
+                                    <!-- select option -->
+                                    <select class="form-select">
+                                       <option selected>2019</option>
+                                       <option value="2023">2020</option>
+                                       <option value="2024">2021</option>
+                                       <option value="2025">2022</option>
+                                       <option value="2025">2023</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <!-- chart -->
+                              <div id="revenueChart" class="mt-6"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-lg-6 col-12 mb-6">
+                        <!-- card -->
+                        <div class="card h-100 card-lg">
+                           <!-- card body -->
+                           <div class="card-body p-6">
+                              <!-- heading -->
+                              <h3 class="mb-0 fs-5">Total Sales</h3>
+                              <div id="totalSale" class="mt-6 d-flex justify-content-center"></div>
+                              <div class="mt-4">
+                                 <!-- list -->
+                                 <ul class="list-unstyled mb-0">
+                                    <li class="mb-2">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill text-primary" viewBox="0 0 16 16">
+                                          <circle cx="8" cy="8" r="8" />
+                                       </svg>
+                                       <span class="ms-1">
+                                          <span class="text-dark">Shippings $32.98</span>
+                                          (2%)
+                                       </span>
+                                    </li>
+                                    <li class="mb-2">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill text-warning" viewBox="0 0 16 16">
+                                          <circle cx="8" cy="8" r="8" />
+                                       </svg>
+                                       <span class="ms-1">
+                                          <span class="text-dark">Refunds $11</span>
+                                          (11%)
+                                       </span>
+                                    </li>
+                                    <li class="mb-2">
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill text-danger" viewBox="0 0 16 16">
+                                          <circle cx="8" cy="8" r="8" />
+                                       </svg>
+                                       <span class="ms-1">
+                                          <span class="text-dark">Order $14.87</span>
+                                          (1%)
+                                       </span>
+                                    </li>
+                                    <li>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="currentColor" class="bi bi-circle-fill text-info" viewBox="0 0 16 16">
+                                          <circle cx="8" cy="8" r="8" />
+                                       </svg>
+                                       <span class="ms-1">
+                                          <span class="text-dark">Income 3,271</span>
+                                          (86%)
+                                       </span>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-6">
+                        <!-- card -->
+                        <div class="card h-100 card-lg">
+                           <!-- card body -->
+                           <div class="card-body p-6">
+                              <h3 class="mb-0 fs-5">Sales Overview</h3>
+                              <div class="mt-6">
+                                 <!-- text -->
+                                 <div class="mb-5">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                       <h5 class="fs-6">Total Profit</h5>
+                                       <span>
+                                          <span class="me-1 text-dark">$1,619</span>
+                                          (8.6%)
+                                       </span>
+                                    </div>
+                                    <!-- main wrapper -->
+                                    <div>
+                                       <!-- progressbar -->
+                                       <div class="progress bg-light-primary" style="height: 6px">
+                                          <div
+                                             class="progress-bar bg-primary"
+                                             role="progressbar"
+                                             aria-label="Example 1px high"
+                                             style="width: 25%"
+                                             aria-valuenow="25"
+                                             aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="mb-5">
+                                    <!-- text -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                       <h5 class="fs-6">Total Income</h5>
+                                       <span>
+                                          <span class="me-1 text-dark">$3,571</span>
+                                          (86.4%)
+                                       </span>
+                                    </div>
+                                    <div>
+                                       <!-- progressbar -->
+                                       <div class="progress bg-info-soft" style="height: 6px">
+                                          <div
+                                             class="progress-bar bg-info"
+                                             role="progressbar"
+                                             aria-label="Example 1px high"
+                                             style="width: 88%"
+                                             aria-valuenow="88"
+                                             aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <!-- text -->
+                                    <div class="d-flex align-items-center justify-content-between">
+                                       <h5 class="fs-6">Total Expenses</h5>
+                                       <span>
+                                          <span class="me-1 text-dark">$3,430</span>
+                                          (74.5%)
+                                       </span>
+                                    </div>
+                                    <div>
+                                       <!-- progressbar -->
+                                       <div class="progress bg-light-danger" style="height: 6px">
+                                          <div
+                                             class="progress-bar bg-danger"
+                                             role="progressbar"
+                                             aria-label="Example 1px high"
+                                             style="width: 45%"
+                                             aria-valuenow="45"
+                                             aria-valuemin="0"
+                                             aria-valuemax="100"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-6">
+                        <div class="position-relative h-100">
+                           <!-- card -->
+                           <div class="card card-lg mb-6">
+                              <!-- card body -->
+                              <div class="card-body px-6 py-8">
+                                 <div class="d-flex align-items-center">
+                                    <div>
+                                       <!-- svg -->
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bell text-warning" viewBox="0 0 16 16">
+                                          <path
+                                             d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                                       </svg>
+                                    </div>
+                                    <!-- text -->
+                                    <div class="ms-4">
+                                       <h5 class="mb-1">Start your day with New Notification.</h5>
+                                       <p class="mb-0">
+                                          You have
+                                          <a class="link-info" href="#!">2 new notification</a>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- card -->
+                           <div class="card card-lg">
+                              <!-- card body -->
+                              <div class="card-body px-6 py-8">
+                                 <div class="d-flex align-items-center">
+                                    <!-- svg -->
+                                    <div>
+                                       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-lightbulb text-success" viewBox="0 0 16 16">
+                                          <path
+                                             d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
+                                       </svg>
+                                    </div>
+                                    <!-- text -->
+                                    <div class="ms-4">
+                                       <h5 class="mb-1">Monitor your Sales and Profitability</h5>
+                                       <p class="mb-0"><a class="link-info" href="#!">View Performance</a></p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- row -->
+                  <div class="row">
+                     <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-6">
+                        <div class="card h-100 card-lg">
+                           <!-- heading -->
+                           <div class="p-6">
+                              <h3 class="mb-0 fs-5">Recent Order</h3>
+                           </div>
+                           <div class="card-body p-0">
+                              <!-- table -->
+                              <div class="table-responsive">
+                                 <table class="table table-centered table-borderless text-nowrap table-hover">
+                                    <thead class="bg-light">
+                                       <tr>
+                                          <th scope="col">Order Number</th>
+                                          <th scope="col">Product Name</th>
+                                          <th scope="col">Order Date</th>
+                                          <th scope="col">Price</th>
+                                          <th scope="col">Status</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>#FC0005</td>
+                                          <td>Haldiram's Sev Bhujia</td>
+                                          <td>28 March 2023</td>
+                                          <td>$18.00</td>
+                                          <td>
+                                             <span class="badge bg-light-primary text-dark-primary">Shipped</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>#FC0004</td>
+                                          <td>NutriChoice Digestive</td>
+                                          <td>24 March 2023</td>
+                                          <td>$24.00</td>
+                                          <td>
+                                             <span class="badge bg-light-warning text-dark-warning">Pending</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>#FC0003</td>
+                                          <td>Onion Flavour Potato</td>
+                                          <td>8 Feb 2023</td>
+                                          <td>$9.00</td>
+                                          <td>
+                                             <span class="badge bg-light-danger text-dark-danger">Cancel</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>#FC0002</td>
+                                          <td>Blueberry Greek Yogurt</td>
+                                          <td>20 Jan 2023</td>
+                                          <td>$12.00</td>
+                                          <td>
+                                             <span class="badge bg-light-warning text-dark-warning">Pending</span>
+                                          </td>
+                                       </tr>
+                                       <tr>
+                                          <td>#FC0001</td>
+                                          <td>Slurrp Millet Chocolate</td>
+                                          <td>14 Jan 2023</td>
+                                          <td>$8.00</td>
+                                          <td>
+                                             <span class="badge bg-light-info text-dark-info">Processing</span>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+            </main>
+         </div>
       </div>
-    </div>
 
-    <!-- Overlay -->
-    <div class="layout-overlay layout-menu-toggle"></div>
+      <!-- Libs JS -->
+      <!-- <script src="../../freshcart-1-2-1/dist/assets/libs/jquery/dist/jquery.min.js"></script> -->
+      <script src="../../freshcart-1-2-1/dist/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="../../freshcart-1-2-1/dist/assets/libs/simplebar/dist/simplebar.min.js"></script>
 
-    <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-    <div class="drag-target"></div>
+      <!-- Theme JS -->
+      <script src="../../freshcart-1-2-1/dist/assets/js/theme.min.js"></script>
 
-    <!--/ Layout wrapper -->
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
-    <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
-    <script src="../../assets/vendor/libs/popper/popper.js"></script>
-    <script src="../../assets/vendor/js/bootstrap.js"></script>
-    <script src="../../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
-    <script src="../../assets/vendor/libs/hammer/hammer.js"></script>
-    <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
-    <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
-
-    <script src="../../assets/vendor/js/menu.js"></script>
-    <!-- endbuild -->
-
-    <!-- Vendors JS -->
-
-    <!-- Main JS -->
-    <script src="../../assets/js/main.js"></script>
-
-    <!-- Page JS -->
-  </body>
+      <script src="../../freshcart-1-2-1/dist/assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+      <script src="../../freshcart-1-2-1/dist/assets/js/vendors/chart.js"></script>
+   </body>
 </html>

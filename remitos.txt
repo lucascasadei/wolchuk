@@ -1,0 +1,14 @@
+BEJ002, Descripción del segundo artículo, asdaasd, 10
+BEJ002, Descripción del segundo artículo, 5, 5
+1234567890125, asdas
+BEJ002, Descripción del segundo artículo, asdaasd, 10
+BEJ002, Descripción del segundo artículo, 5, 5
+1234567890125, asdas, N/A, N/A
+WOL, 0001, 10, 10
+1234567890127, asd, N/A, N/A
+WOL, 0001 - Leche x500gr Entera, , 
+1234567890127, asd, asdasd, 999
+1234567890127, asd, asdasd, 3333
+WOL, 0001, 12, 12
+1234567890127, sdf, sdfsdf, 33333
+WOL, 0001, asdf, 10

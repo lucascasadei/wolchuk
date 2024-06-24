@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Crear Remito</title>
+        <!-- Favicon icon -->
+        <link rel="shortcut icon" type="image/x-icon"
+            href="freshcart-1-2-1/dist/assets/images/favicon/favicon.ico">
+        <!-- Libs CSS -->
+        <link
+            href="freshcart-1-2-1/dist/assets/libs/tiny-slider/dist/tiny-slider.css"
+            rel="stylesheet">
+        <link
+            href="freshcart-1-2-1/dist/assets/libs/nouislider/dist/nouislider.min.css"
+            rel="stylesheet">
+        <link
+            href="freshcart-1-2-1/dist/assets/libs/bootstrap-icons/font/bootstrap-icons.min.css"
+            rel="stylesheet">
+        <link
+            href="freshcart-1-2-1/dist/assets/libs/feather-webfont/dist/feather-icons.css"
+            rel="stylesheet">
+        <link
+            href="freshcart-1-2-1/dist/assets/libs/simplebar/dist/simplebar.min.css"
+            rel="stylesheet">
+        <!-- Theme CSS -->
+        <link rel="stylesheet"
+            href="freshcart-1-2-1/dist/assets/css/theme.min.css">
+    </head>
+    <body>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h4 class="card-title">Crear Remito</h4>
+                        </div>
+                        <div class="card-body">
+                            <form id="itemForm">
+                                <div class="mb-3">
+                                    <label for="codigo"
+                                        class="form-label">Código de
+                                        Barras:</label>
+                                    <input type="text" class="form-control"
+                                        id="codigo" required autofocus>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-primary w-100">Agregar
+                                    Artículo</button>
+                            </form>
+                            <ul id="itemList" class="list-group mt-3"></ul>
+                            <button class="btn btn-success mt-3 w-100"
+                                id="finalize">Finalizar Remito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Libs JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script
+            src="freshcart-1-2-1/dist/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script
+            src="freshcart-1-2-1/dist/assets/libs/simplebar/dist/simplebar.min.js"></script>
+        <!-- Theme JS -->
+        <script src="freshcart-1-2-1/dist/assets/js/theme.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Custom JS -->
+        <script src="scripts.js"></script>
+
+        <script>
+        $(document).ready(function() {
+            $('#itemForm').submit(function(event) {
+                event.preventDefault();
+                var codigo = $('#codigo').val();
+                $.ajax({
+                    url: 'api.php',
+                    type: 'POST',
+                    data: { codigo: codigo },
+                    success: function(response) {
+                        if(response) {
+                            try {
+                                var itemData = JSON.parse(response);
+                                if (itemData.error) {
+                                    Swal.fire({
+                                        title: 'Artículo no encontrado',
+                                        text: '¿Deseas agregar el nuevo artículo?',
+                                        icon: 'question',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'Sí, agregarlo',
+                                        cancelButtonText: 'No, cancelar',
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            Swal.fire({
+                                                title: 'Agregar nuevo artículo',
+                                                html: `<input id="swal-input1" class="swal2-input" placeholder="Descripción">` +
+                                                      `<input id="swal-input2" class="swal2-input" placeholder="Lote">` +
+                                                      `<input id="swal-input3" class="swal2-input" type="number" placeholder="Cantidad">`,
+                                                focusConfirm: false,
+                                                preConfirm: () => {
+                                                    const descripcion = Swal.getPopup().querySelector('#swal-input1').value;
+                                                    const lote = Swal.getPopup().querySelector('#swal-input2').value;
+                                                    const cantidad = Swal.getPopup().querySelector('#swal-input3').value;
+                                                    $('#itemList').append(
+                                                        `<li class="list-group-item">${codigo} - ${descripcion} - Lote: <input type="text" class="form-control lote" value="${lote}" style="width: auto; display: inline-block; margin-right: 10px;"> Cantidad: <input type="number" class="form-control cantidad" value="${cantidad}" style="width: auto; display: inline-block;"></li>`
+                                                    );
+                                                }
+                                            });
+                                        }
+                                    });
+                                } else {
+                                    $('#itemList').append(
+                                        `<li class="list-group-item">${itemData.codBejerman} - ${itemData.descripcion} - Lote: <input type="text" class="form-control lote" style="width: auto; display: inline-block; margin-right: 10px;"> Cantidad: <input type="number" class="form-control cantidad" style="width: auto; display: inline-block;"></li>`
+                                    );
+                                }
+                            } catch(e) {
+                                console.error("Error parsing JSON!", e);
+                            }
+                        } else {
+                            console.error("Received empty response");
+                        }
+                    }
+                });
+            });
+        
+            $('#finalize').click(function() {
+    var items = [];
+    $('#itemList li').each(function() {
+        var texto = $(this).text();
+        var parts = texto.split('-');
+        var codBejerman = parts[0].trim();
+        var descripcion = parts[1].trim();
+        var lote = $(this).find('.lote').val();
+        var cantidad = $(this).find('.cantidad').val();
+        items.push({ codBejerman, descripcion, lote, cantidad });
+    });
+
+    $.ajax({
+        url: 'guardar_remito.php',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ items }),
+        success: function(resp) {
+            // Directly check the object without parsing
+            if (resp.status === 'success') {
+                alert('Remito guardado correctamente!');
+            } else {
+                alert('Error al guardar el remito: ' + resp.message);
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.error('AJAX error:', textStatus, errorThrown);
+        }
+    });
+});
+});
+
+        </script>
+        
+
+    </body>
+</html>
