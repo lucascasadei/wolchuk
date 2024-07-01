@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $item['codBejerman'] ?? 'N/A',
                 $item['descripcion'] ?? 'N/A',
                 $item['lote'] ?? 'N/A',
-                $item['cantidad'] ?? 'N/A'
+                $item['cantidad'] ?? 'N/A',
+                $item['vencimiento'] ?? 'N/A'
             ]) . PHP_EOL;
         }
         // Guardar el contenido en un archivo nuevo, asegurando que el directorio exista y sea escribible
